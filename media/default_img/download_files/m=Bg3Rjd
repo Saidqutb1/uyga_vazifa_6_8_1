@@ -1,0 +1,8 @@
+"use strict";loaded_1_17(function(_){var window=this;
+_.m("Bg3Rjd");
+var Bem=function(a){_.Wp.call(this,a.Na);this.ys=!1;this.Da=new Map;this.Fa=!1;this.Ud=a.service.logging};_.F(Bem,_.Wp);Bem.Wa=_.Wp.Wa;Bem.Ka=function(){return{service:{logging:_.Q0}}};
+Bem.prototype.Ma=function(a){var b=[59,43];if(void 0!==this.oa)_.mb("startTrackingStartupTimes should only be called once.");else if(this.ys)_.mb("Logging cannot resume after it's been cancelled.");else{this.oa=new Set(b);b=_.Tb(this.Da.keys());for(var c=b.next();!c.done;c=b.next())this.oa.delete(c.value);this.Ia(1,a)}};Bem.prototype.cancel=function(){this.ys=!0};
+Bem.prototype.Ia=function(a,b){if(!this.ys&&!this.Fa)if(this.Da.has(a))_.mb("Each phase should only be logged once.");else if(this.Da.set(a,null!=b?b:Date.now()),void 0!==this.oa&&(this.oa.delete(a),!(0<this.oa.size))){a=new _.rxl;b=_.Tb(this.Da.entries());for(var c=b.next();!c.done;c=b.next()){var d=_.Tb(c.value);c=d.next().value;d=d.next().value;_.yem(c,d,a)}this.Ud.Ww({id:201146,metadata:_.zem(a)});this.Fa=!0}};_.Xp(_.Hqb,Bem);
+_.p();
+});
+// Google Inc.
